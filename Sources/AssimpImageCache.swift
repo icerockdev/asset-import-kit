@@ -9,16 +9,19 @@
 import ImageIO
 import Assimp
 
-class AssimpImageCache {
-    
+public class AssimpImageCache {
+    public static let shared = AssimpImageCache()
     var cacheDictionary: [String : CGImage] = [:]
     
     func cachedFileAtPath(path: String) -> CGImage? {
         return cacheDictionary[path]
     }
     
-    func storeImage(image: CGImage, toPath: String) {
+    public func storeImage(image: CGImage, toPath: String) {
         cacheDictionary[toPath] = image
     }
     
+    public func clean() {
+        cacheDictionary.removeAll()
+    }
 }

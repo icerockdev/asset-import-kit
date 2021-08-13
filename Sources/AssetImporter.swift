@@ -89,7 +89,7 @@ public class AssetImporter {
          Assign geometry, materials, lights and cameras to the node
          ---------------------------------------------------------------------
          */
-        let imageCache = AssimpImageCache()
+        let imageCache = AssimpImageCache.shared
         let aiRootNode = aiScene.mRootNode.pointee
         let scnRootNode = makeSCNNode(fromAssimpNode: aiRootNode,
                                       in: aiScene,

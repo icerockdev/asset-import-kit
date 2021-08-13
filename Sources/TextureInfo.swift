@@ -188,6 +188,9 @@ public class TextureInfo {
                             self.embeddedTextureIndex = embeddedTextureIndex
                         }
                     }
+                    if let cachedImage = imageCache.cachedFileAtPath(path: texFilePath as String) {
+                        self.image = cachedImage
+                    } else
                     if let embeddedTextureIndex = self.embeddedTextureIndex {
                         if embeddedTextureIndex >= Int(aiScene.mNumTextures) {
                             debugPrint("ERROR: Embedded texture index: \(embeddedTextureIndex) is out of bounds (0..\((aiScene.mNumTextures - 1))")
