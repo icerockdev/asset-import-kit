@@ -241,14 +241,14 @@ public class TextureInfo {
                                    length: Int(mWidth))
             self.imageDataProvider = CGDataProvider(data: imageData)
             let format = tupleOfInt8sToString(aiTexture.achFormatHint)
-            if format == "png" {
+            if format.hasSuffix(".png") {
                 debugPrint("Created png embedded texture")
                 self.image = CGImage(pngDataProviderSource: self.imageDataProvider!,
                                      decode: nil,
                                      shouldInterpolate: true,
                                      intent: .defaultIntent)
             }
-            if format == "jpg" {
+            if format.hasSuffix(".jpg") {
                 debugPrint("Created jpg embedded texture")
                 self.image = CGImage(jpegDataProviderSource: self.imageDataProvider!,
                                      decode: nil,
