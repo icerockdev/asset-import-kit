@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary = 'Swifty cross platform library (macOS, iOS) that converts Assimp supported models to SceneKit scenes.'
   s.description = 'AssetImportKit allows you to import Assimp supported file formats directly in SceneKit at runtime. The library supports: geometry, materials (with color, embedded textures and external textures), cameras, skeletal animations, serialization to .scn format.'
   s.homepage = 'https://github.com/eugenebokhan/asset-import-kit'
-  s.source = { :git => 'https://github.com/eugenebokhan/asset-import-kit.git', :tag => s.version.to_s }
+  s.source = { :git => 'https://github.com/icerockdev/asset-import-kit.git', :tag => s.version.to_s }
   s.author = { 'Eugene Bokhan' => 'eugenebokhan@protonmail.com' }
   s.social_media_url = 'http://twitter.com/eugenebokhan'
   s.license = { :file => 'LICENSE' }
